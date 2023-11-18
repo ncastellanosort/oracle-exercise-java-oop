@@ -6,8 +6,8 @@ public class Main {
 
         Product p1 = new Product();
         Product p2 = new Product();
-        Product p3 = new Product(3,"Arroz", 4, 12.5);
-        Product p4 = new Product(4,"Pan", 5, 3.5);
+        Product p3 = new Product(3,"Arroz", 4, 12.5, true);
+        Product p4 = new Product(4,"Pan", 5, 3.5, false);
 
         p1.setNumeroElemento(1);
         p1.setNombreProducto("Helado");
@@ -29,6 +29,8 @@ public class Main {
         System.out.println();
         System.out.println(p4.toString());
         System.out.println();
+
+
 
     }
 }

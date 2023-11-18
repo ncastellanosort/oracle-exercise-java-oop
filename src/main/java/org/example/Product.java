@@ -7,7 +7,14 @@ public class Product {
     private String nombreProducto;
     private int numExistencias;
     private double precio;
+    private boolean activo;
 
+    public boolean getActivo(){
+        return activo;
+    }
+    public void setActivo(boolean activo){
+        this.activo = activo;
+    }
 
     public int getNumeroElemento() {
         return numeroElemento;
@@ -45,16 +52,17 @@ public class Product {
 
     }
 
-    public Product(int numeroElemento, String nombreProducto, int numExistencias, double precio){
+    public Product(int numeroElemento, String nombreProducto, int numExistencias, double precio, boolean activo){
         this.numeroElemento = numeroElemento;
         this.nombreProducto = nombreProducto;
         this.numExistencias = numExistencias;
         this.precio = precio;
+        this.activo = activo;
 
     }
 
     public String toString(){
-        String nm = "Item Number: \t" + getNumeroElemento() + "\nName: \t" + getNombreProducto() + "\nQuantity in Stock: \t" + getNumExistencias() + "\nPrice: \t" + getPrecio();
+        String nm = "Item Number: \t" + getNumeroElemento() + "\nName: \t" + getNombreProducto() + "\nQuantity in Stock: \t" + getNumExistencias() + "\nPrice: \t" + getPrecio() + "\nActivo: " + getActivo();
         return nm;
 
     }
